@@ -2,6 +2,7 @@ import MoneyStack from './MoneyStack';
 
 class ATM {
   constructor() {
+    // A basic example of the Chain-of-responsibility pattern (needs work)
     // SRP VIOLATION #1 - Should an ATM directly manage its denominations and transactions?
     // NOTE: Also an OCP violation.
     let stack100 = new MoneyStack(100);

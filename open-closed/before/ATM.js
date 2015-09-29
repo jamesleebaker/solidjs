@@ -29,11 +29,11 @@ class ATM {
   }
 
   withdraw(amount) {
-    this.stackManager.withdraw(amount);
+    this.currentStack.withdraw(amount);
   }
 
   deposit(amount) {
-    this.stackManager.deposit(amount);
+    this.currentStack.deposit(amount);
   }
 
   getBalance() {
