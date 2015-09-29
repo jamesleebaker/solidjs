@@ -1,18 +1,20 @@
 import ATM from './ATM';
+import USGeneralStack from './USGeneralStack';
+import YenStack from './YenStack';
 
 let stacks = [
-  new USGeneralStack(100, 'dollar'),
-  new USGeneralStack(50, 'dollar'),
-  new USGeneralStack(20, 'dollar'),
-  new USGeneralStack(10, 'dollar'),
-  new USGeneralStack(5, 'dollar'),
-  new USGeneralStack(1, 'dollar'),
-  new YenStack(1, 'yen'),
-  new YenStack(5, 'yen'),
-  new YenStack(10, 'yen'),
-  new YenStack(50, 'yen'),
-  new YenStack(100, 'yen'),
-  new YenStack(500, 'yen')
+  new USGeneralStack(100),
+  new USGeneralStack(50),
+  new USGeneralStack(20),
+  new USGeneralStack(10),
+  new USGeneralStack(5),
+  new USGeneralStack(1),
+  new YenStack(1),
+  new YenStack(5),
+  new YenStack(10),
+  new YenStack(50),
+  new YenStack(100),
+  new YenStack(500)
 ];
 
 let stackManager = new StackManager(stacks);
