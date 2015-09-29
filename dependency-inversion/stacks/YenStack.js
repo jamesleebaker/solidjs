@@ -1,12 +1,9 @@
 import MoneyStack from './MoneyStack';
 
+const CURRENCY = 'yen';
+
 class YenStack extends MoneyStack {
   constructor(billSize) {
-    super(billSize);
-  }
-
-  withdraw(amount) {
-
-    return super.withdraw(amount);
+    super(billSize, CURRENCY);
   }
 }

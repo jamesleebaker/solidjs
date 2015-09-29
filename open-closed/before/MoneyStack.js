@@ -12,7 +12,21 @@ class MoneyStack {
     }
 
     if(amount > 0 && this.next) {
-      this.next.withdraw(amount);
+      return this.next.withdraw(amount);
+    }
+
+    return numOfBills;
+  }
+
+  deposit(amount) {
+    const numOfBills = Math.floor(amount / this.billSize);
+
+    if (numOfBills > 0) {
+      amount = amount - (this.billSize * numOfBills);
+    }
+
+    if(amount > 0 && this.next) {
+      this.next.deposit(amount);
       return;
     }
 

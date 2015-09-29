@@ -16,7 +16,7 @@ class ATM {
       this.stacks.push(stack);
     });
 
-    this.currentStack = this.stacks[this.stacks.length - 1];
+    this.currentStack = this.stacks[0];
   }
 
   withdraw(amount) {

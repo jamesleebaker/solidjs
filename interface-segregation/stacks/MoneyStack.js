@@ -7,17 +7,28 @@ class MoneyStack {
 
   withdraw(amount) {
     const numOfBills = Math.floor(amount / this.billSize);
-    const next = this.next;
 
     if (numOfBills > 0) {
       amount = amount - (this.billSize * numOfBills);
     }
 
     if(amount > 0 && this.next) {
-      if(this.next.currency === this.currency) {
-        this.next.withdraw(amount);
-        return;
-      }
+      return this.next.withdraw(amount);
+    }
+
+    return numOfBills;
+  }
+
+  deposit(amount) {
+    const numOfBills = Math.floor(amount / this.billSize);
+
+    if (numOfBills > 0) {
+      amount = amount - (this.billSize * numOfBills);
+    }
+
+    if(amount > 0 && this.next) {
+      this.next.deposit(amount);
+      return;
     }
 
     return numOfBills;

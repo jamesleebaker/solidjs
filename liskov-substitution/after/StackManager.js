@@ -35,11 +35,7 @@ class StackManager {
       return this.currentStack;
     }
 
-    this.stacks.filter((stack) => {
-      if(currency === stack.currency) {
-        return results.push(stack);
-      }
-    });
+    results = this.stacks.filter((stack) => currency === stack.currency)
 
     return results[0];
   }
