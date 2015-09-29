@@ -1,6 +1,11 @@
+/*
+  The "interface" for this object is quite concise and seems to conform well to ISP
+    - We have everything we need at constuction time (though we could use some checks)
+    - The methods are clear and straightforward to implement.
+ */
+
 class ATM {
   constructor(stackManager) {
-    // Also optimized for DIP
     this.stackManager = stackManager;
   }
 
@@ -17,9 +22,6 @@ class ATM {
     console.log(`${numOfBills} $${this.billSize} bill(s) has/have been spit out`);
   }
 
-  // One method for creating an extension point
-  // - EventType.addEventListener is a good example of following the OCP.
-  // Also optimized for DIP (Plug-in pattern)
   registerAction(action, fn) {
     this[action] = fn.call(this);
   }

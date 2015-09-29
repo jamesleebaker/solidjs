@@ -1,6 +1,7 @@
 import MoneyStack from './MoneyStack';
 
 class ATM {
+  // This can still be optimized via DIP (Do we need to depend on MoneyStack?)
   constructor(denominations) {
     this.stacks = [];
 
@@ -28,7 +29,8 @@ class ATM {
   }
 
   // One method for creating an extension point
-  // - Element.prototype.addEventListener is a good example of following the OCP.
+  // - EventType.addEventListener is a good example of following the OCP.
+  // Also optimized for DIP (Plug-in pattern)
   registerAction(action, fn) {
     this[action] = fn.call(this);
   }

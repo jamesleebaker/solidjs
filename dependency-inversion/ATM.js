@@ -1,6 +1,12 @@
+/*
+  The "interface" for this object is quite concise and seems to conform well to ISP
+    - We have everything we need at constuction time (though we could use some checks)
+    - The methods are clear and straightforward to implement.
+ */
+
 class ATM {
+  // DIP - Constructor Injection of a high-level abstraction
   constructor(stackManager) {
-    // Also optimized for DIP
     this.stackManager = stackManager;
   }
 

@@ -28,7 +28,8 @@ class ATM {
   }
 
   // One method for creating an extension point
-  // - Element.prototype.addEventListener is a good example of following the OCP.
+  // - EventType.addEventListener is a good example of following the OCP.
+  // Also optimized for DIP (Plug-in pattern)
   registerAction(action, fn) {
     this[action] = fn.call(this);
   }
