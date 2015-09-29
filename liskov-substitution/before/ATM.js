@@ -19,12 +19,7 @@ class ATM {
   }
 
   withdraw(amount) {
-    this.currentStack.withdraw(amount);
-  }
-
-  // FOR NOW
-  _ejectMoney(numOfBills) {
-    console.log(`${numOfBills} $${this.billSize} bill(s) has/have been spit out`);
+    return this.currentStack.withdraw(amount);
   }
 
   // One method for creating an extension point

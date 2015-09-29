@@ -1,7 +1,8 @@
 import ATM from './ATM';
 
 let atm = new ATM();
-atm.withdraw(186);
+let bills = atm.withdraw(186);
+console.log(`${bills} bill(s) has/have been spit out`);
 /* outputs:
     100
     50
@@ -11,7 +12,8 @@ atm.withdraw(186);
     1
 */
 
-atm.withdraw(72);
+bills = atm.withdraw(72);
+console.log(`${bills} bill(s) has/have been spit out`);
 /* outputs:
     50
     20

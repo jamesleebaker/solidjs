@@ -10,16 +10,11 @@ class ATM {
   }
 
   withdraw(amount, currency) {
-    this.stackManager.withdraw(amount, currency);
+    return this.stackManager.withdraw(amount, currency);
   }
 
   deposit(amount, account) {
     //... Magic
-  }
-
-  // FOR NOW
-  _ejectMoney(numOfBills) {
-    console.log(`${numOfBills} $${this.billSize} bill(s) has/have been spit out`);
   }
 
   registerAction(action, fn) {

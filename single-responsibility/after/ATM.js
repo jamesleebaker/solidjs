@@ -26,16 +26,9 @@ class ATM {
   //   this.billSize = this.denominations[this.denominations.indexOf(this.billSize) + 1];
   // }
 
-  // SRP VIOLATION #3 (Possible)
-  // Third reason for change
-  // - Presentation layer for ejecting money
-  // What if this text needs to change or we no longer need to console.log?
-  _ejectMoney(numOfBills) {
-    console.log(`${numOfBills} $${this.billSize} bill(s) has/have been spit out`);
-  }
-
+  // SRP RESOLVED
   withdraw(amount) {
-    this.currentStack.withdraw(amount);
+    return this.currentStack.withdraw(amount);
   }
 
   deposit(amount) {
